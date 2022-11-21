@@ -10,6 +10,8 @@ public class Jugador
     private DateTime _fechaNacimiento;
     private int _puntajeActual;
     private string _fotoJugador;
+    private string _fkpais;
+    
 
 
     public int IdJugador
@@ -69,6 +71,19 @@ public class Jugador
             _fotoJugador = value;
         }
     }
+
+    public string FkPais 
+    {
+        get
+        {
+            return _fkpais;
+        }
+        set{
+            _fkpais = value;
+        }
+    }
+
+
 
 
 }

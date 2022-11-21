@@ -1,0 +1,127 @@
+
+<div class="encabezado">	
+  
+			<section>
+				<h1 class="heading">CASINORT</h1>
+				<h2 class="heading3"> Mayor - Menor - Igual</h2>
+        <h5 class="heading"> Como sera la proxima carta?</h5>
+        <h3 class="heading3">Puntos actuales: @Actual.PuntajeActual</h3>
+			</section>
+													
+ </div>
+
+@if (ViewBag.PuntajeActual > 0)
+{
+
+<div class="ala alert alert-danger alinear" role="alert">
+  <h3 class="heading2"><u>Tu carta es</u></h3>
+</div>
+
+@switch (ViewBag.NumeroRandom1)
+{
+  case 1:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/474x/d0/54/6c/d0546c58569a9a23bddd04298eac01d2.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 2:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/copas-invertida.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 3:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/236x/9e/d1/1a/9ed11a42b57ac6a51f45ea146847e453.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 4:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/cuatro-derecha-copas.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 5:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/736x/ce/6d/a9/ce6da9c29a9cca0b1b6fb6f2511f52b1.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 6:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/seis-derecho.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 7:
+  <div class="alinear">
+    <img src="https://lacajadepandra.files.wordpress.com/2018/04/7-copas.jpg?w=500&h=776" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 8:
+  <div class="alinear">
+    <img src="https://www.tarotsolaguilar.com/wp-content/uploads/2020/10/ocho-copas-e.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 9:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/nuevecopas.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 10:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/474x/26/b9/c8/26b9c8127437f2135a3f482590b8db03.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 11:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/474x/07/d5/2e/07d52ea5558997beeb4bb87e7c89e9b8.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 12:
+  <div class="alinear">
+    <img src="https://juantxubazan.files.wordpress.com/2020/11/12reycopas_v2_reducidisimo.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+}
+<p>
+  
+</p>
+
+<div class="ala alert alert-danger alinear" role="alert">
+  <h3 class="heading2"><u>La siguiente carta sera</u></h3>
+</div>
+
+<div class="alinear">
+
+ <form method="post" action='@Url.Action("MayorMenorIgual")' enctype="multipart/form-data">
+
+    <select class="form-select" aria-label="Default select example" name="Opcion">
+            <option selected>¿Mayor, menor o igual?</option>
+
+              <option value="1">Mayor</option>
+              <option value="2">Menor</option>
+              <option value="3">Igual</option>
+    </select>
+    
+
+
+
+  <br>
+  <input class="alert alert-danger ancho subrayado loco" type="submit" value="ADIVINAR">
+  </form>
+</div>
+}
+@if (@ViewBag.PuntajeActual <= 0)
+{
+  <div class="ala alert alert-danger alinear" role="alert">
+  <h3 class="heading2"><u>Te quedaste sin puntos...</u></h3>
+</div>
+}
+
+
+<br>
+
+<a class="" asp-area="" asp-controller="Home" asp-action="Puntos">
+  
+  <div class="alert alert-danger alinear margen none" role="alert">
+  <h1 class="subr">Volver a la home</h1>
+</div>
+  
+  </a>

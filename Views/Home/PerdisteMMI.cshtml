@@ -1,0 +1,87 @@
+<div class="encabezado borde">	
+			<section>
+        <div class="alinear tituloP alert alert-danger borde" role="alert">
+  <h1><b>Perdiste :(</b></h1>
+</div>
+				<h2 class="rojo margen"> Restaste 10 puntos</h2>
+        <h4 class="rojo"> Puntaje actual: @ViewBag.PuntajeActual</h4>
+			</section>										
+ </div>
+
+ <div class="borde tituloP alert alert-danger alinear" role="alert">
+  <h3 class="rojo2"><u><b>La siguiente carta era:</b></u></h3>
+</div>
+
+
+@switch (Actual.Num2)
+{
+  case 1:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/474x/d0/54/6c/d0546c58569a9a23bddd04298eac01d2.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 2:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/copas-invertida.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 3:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/236x/9e/d1/1a/9ed11a42b57ac6a51f45ea146847e453.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 4:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/cuatro-derecha-copas.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 5:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/736x/ce/6d/a9/ce6da9c29a9cca0b1b6fb6f2511f52b1.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 6:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/seis-derecho.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 7:
+  <div class="alinear">
+    <img src="https://lacajadepandra.files.wordpress.com/2018/04/7-copas.jpg?w=500&h=776" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 8:
+  <div class="alinear">
+    <img src="https://www.tarotsolaguilar.com/wp-content/uploads/2020/10/ocho-copas-e.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 9:
+  <div class="alinear">
+    <img src="https://www.cadizdirecto.com/tarot/significado-cartas/baraja-espanola/wp-content/uploads/2020/11/nuevecopas.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 10:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/474x/26/b9/c8/26b9c8127437f2135a3f482590b8db03.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 11:
+  <div class="alinear">
+    <img src="https://i.pinimg.com/474x/07/d5/2e/07d52ea5558997beeb4bb87e7c89e9b8.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+  case 12:
+  <div class="alinear">
+    <img src="https://juantxubazan.files.wordpress.com/2020/11/12reycopas_v2_reducidisimo.jpg" class="alinear cartas card-img-top" alt="...">
+    </div>
+  break;
+}
+<br>
+<a class="" asp-area="" asp-controller="Home" asp-action="Juego1">
+  
+  <div class="tituloP borde subrayado alert alert-danger alinear margen" role="alert">
+  <h1 class="subrayado rojo2">Volver al MMI</h1>
+</div>
+  
+  </a>
+

@@ -1,0 +1,37 @@
+<div class="encabezado">	
+  
+			<section>
+				<h1 class="heading">CASINORT</h1>
+				<h2 class="heading3"> FIN</h2>
+			</section>								
+ </div>
+
+ 
+<br>
+<div class="alinear">
+ <div class="perdedor alinear card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="@Actual.FotoJugador" class="fotomal img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title"><b>@Actual.Username</b></h1>
+        <h5 class="card-title"><i>@ViewBag.PaisPosta</i></h5>
+        <h5 class="card-title"><i>@Actual.FechaNacimiento.ToShortDateString()</i></h5>
+        <h3 class="card-text"><u>Puntaje final: @Actual.PuntajeActual</u></h3>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="ala alert alert-danger alinear" role="alert">
+  <h3 class="heading2"><u>Solo los cracks pueden ver la tabla de los estudiantes cracks...</u></h3>
+</div>
+
+<div class="alinear">
+<a class="alert alert-warning  subrayado" asp-area="" asp-controller="Home" asp-action="Index">
+  <h1><b>Proximo jugador</b></h1> 
+</a>
+</div>

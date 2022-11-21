@@ -1,0 +1,66 @@
+<div class="encabezado">	
+  
+			<section>
+				<h1 class="heading">CASINORT</h1>
+				<h2 class="heading3"> BlackJack</h2>
+        <h3 class="heading3">Puntos actuales: @Actual.PuntajeActual</h3>
+			</section>
+													
+ </div>
+
+@if (@ViewBag.PuntajeActual > 0)
+{
+
+<div class="ala alert alert-danger alinear" role="alert">
+  <h3 class="heading2">Tenes que sacar mas puntos que el crupier para ganar. Pero si te pasas de 21, perdes.</h3>
+</div>
+
+
+<a class="" asp-area="" asp-controller="Home" asp-action="PuntosBlack">
+  
+  <div class="alert alert-info" role="alert">
+  <h1 class="alinear"><i>Pedir más cartas</i></h1>
+</div>
+  </a>
+
+  <div class="alert alert-warning" role="alert">
+  <h1 class="alinear">Puntaje del BlackJack: <b>@ViewBag.Puntblack</b></h1>
+</div>
+
+<div class="ala alert alert-danger alinear" role="alert">
+  <h3 class="heading2"><u>El malvado crupier:</u></h3>
+</div>
+
+<div class="alinear">
+<img src="~/Imagenes/Gotze.png" class=" crupier">
+</div>
+
+  
+<br>
+
+<form method="post" action='@Url.Action("Verificar")' enctype="multipart/form-data">
+
+    <input type="hidden" id="acticuloId" name="Puntoslocos" value="@ViewBag.Puntblack">
+
+<div class="alinear">
+    <input class="alert alert-danger ancho subrayado loco" type="submit" value="Enviar puntaje">
+</div>
+</form>
+}
+@if (@ViewBag.PuntajeActual <= 0)
+{
+  <div class="ala alert alert-danger alinear" role="alert">
+  <h3 class="heading2"><u>Te quedaste sin puntos...</u></h3>
+</div>
+}
+
+
+<br>
+<a class="" asp-area="" asp-controller="Home" asp-action="Puntos">
+  
+  <div class="alert alert-danger alinear margen" role="alert">
+  <h1 class="subr">Volver a la home</h1>
+</div>
+  
+  </a>
+

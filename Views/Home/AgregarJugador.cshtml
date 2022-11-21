@@ -1,0 +1,61 @@
+<div class="encabezado">	
+  
+			<section>
+				<h1 class="heading">CASINORT</h1>
+				<h2 class="heading3"> REGISTRATE</h2>
+        <h5 class="heading"> Ingresa todos tus datos y juga para quedar en el ranking de estudiantes</h5>
+			</section>
+													
+ </div>
+  </a>
+</div>
+
+
+<div class="alinear">
+<div class="alinear form">
+ <form method="post" action='@Url.Action("GuardarJugador","Home")' enctype="multipart/form-data">
+
+    <div class="fondo alert alert-danger alinear" role="alert">
+  <h4 class="ola">Ingrese su nombre y apellido</h4>
+</div>
+<div class="blank alert alert-danger alinear" role="alert">
+<input type="text" name="Username" required><br><br>
+</div>
+
+<div class="fondo alert alert-danger alinear" role="alert">
+  <h4 class="ola">Ingrese su fecha de nacimiento</h4>
+  </div>
+
+  <div class="blank alert alert-danger alinear" role="alert">
+  <input type="date" name="FechaNacimiento" required><br><br>
+  </div>
+
+  <div class="fondo alert alert-danger alinear" role="alert">
+  <h4 class="ola">Ingrese la URL con su avatar de juego</h4>
+  </div>
+
+  <div class="blank alert alert-danger alinear" role="alert">
+  <input type="text" name="FotoJugador" required><br><br>
+  </div>
+
+  <div class="fondo alert alert-danger alinear" role="alert">
+  <h4 class="ola">Ingrese su pais de proveniencia</h4>
+  
+  </div>  
+
+  <div class="blank alert alert-danger alinear" role="alert">
+  <select class="form-select text-dark" aria-label="Default select example" name="Pais">
+            <option selected>Elegí tu país de proveniencia</option>
+            @foreach (Pais p in ViewBag.ListaPaises)
+            {
+              <option value="@p.IdPais">@p.Nombre</option>
+            }
+    </select>
+  </div>
+
+<div class="alinear">
+<input class="alert alert-danger subrayado" type="submit" value="CREAR JUGADOR">
+</div>
+</form>
+</div>
+</div>

@@ -1,0 +1,72 @@
+<div class="encabezadoG borde">	
+			<section>
+        <div class="alinear titulo alert alert-success borde" role="alert">
+  <h1><b>GANASTE!</b></h1>
+</div>
+				<h2 class="verde margen"> Sumaste 60 puntos!</h2>
+        <h4 class="verde"> Puntaje actual: @ViewBag.PuntajeActual</h4>
+			</section>										
+ </div>
+
+ 
+
+@switch (ViewBag.CaballoGanador)
+{
+  case 1:
+  <div class="borde titulo alert alert-success alinear" role="alert">
+  <h3 class="verde">El caballo ganador fue: <u>El mexicano loco</u></h3>
+</div>
+
+  <div class="alinear">
+    <img src="~/Imagenes/Caballo1.png"class="alinear fotocaballo card-img-top" alt="...">
+    </div>
+    break;
+    case 2:
+    <div class="borde titulo alert alert-success alinear" role="alert">
+  <h3 class="verde">El caballo ganador fue: <u>El rey carlos</u></h3>
+</div>
+  <div class="alinear">
+    <img src="~/Imagenes/Caballo2.png"class="alinear fotocaballo card-img-top" alt="...">
+    </div>
+    break;
+    case 3:
+    <div class="borde titulo alert alert-success alinear" role="alert">
+  <h3 class="verde">El caballo ganador fue: <u>El friolento adams</u></h3>
+</div>
+  <div class="alinear">
+    <img src="~/Imagenes/Caballo3.png"class="alinear fotocaballo card-img-top" alt="...">
+    </div>
+    break;
+    case 4:
+    <div class="borde titulo alert alert-success alinear" role="alert">
+  <h3 class="verde">El caballo ganador fue: <u>El facha gutierrez</u></h3>
+</div>
+  <div class="alinear">
+    <img src="~/Imagenes/Caballo4.png"class="alinear fotocaballo card-img-top" alt="...">
+    </div>
+    break;
+    case 5:
+    <div class="borde titulo alert alert-success alinear" role="alert">
+  <h3 class="verde">El caballo ganador fue: <u>La maquina usain</u></h3>
+</div>
+  <div class="alinear">
+    <img src="~/Imagenes/Caballo5.png"class="alinear fotocaballo card-img-top" alt="...">
+    </div>
+    break;
+    case 6:
+    <div class="borde titulo alert alert-success alinear" role="alert">
+  <h3 class="verde">El caballo ganador fue: <u>El Messias</u></h3>
+</div>
+  <div class="alinear">
+    <img src="~/Imagenes/Caballo6.png"class="alinear fotocaballo card-img-top" alt="...">
+    </div>
+    break;
+}
+<br>
+<a class="" asp-area="" asp-controller="Home" asp-action="Caballos">
+  
+  <div class="titulo subrayado alert alert-success alinear margen" role="alert">
+  <h1 class="subr">Volver a la siguiente carrera</h1>
+</div>
+  
+  </a>
